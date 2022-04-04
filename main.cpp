@@ -222,7 +222,7 @@ public:
             for (int i = 0; i < this->size_y; i++) {
                 min = this->arr[normalize_index(i, 1)];
                 for (int j = 0; j < this->size_x; j++) {
-                    if (this->arr[normalize_index(j, i)] < min) {
+                    if (this->arr[normalize_index(i, j)] < min) {
                         min = this->arr[normalize_index(i, j)];
                     }
                 }
