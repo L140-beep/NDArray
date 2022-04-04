@@ -204,7 +204,7 @@ public:
             NDArray new_arr({ this->size_x, 1 });
             new_arr.zeros();
             for (int i = 0; i < this->size_x; i++) {
-                min = this->arr[normalize_index(i, 1)];
+                min = this->arr[normalize_index(1, i)];
                 for (int j = 0; j < this->size_y; j++) {
                     if (this->arr[normalize_index(j, i)] < min) {
                         min = this->arr[normalize_index(j, i)];
