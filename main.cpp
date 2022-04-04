@@ -220,7 +220,7 @@ public:
             NDArray new_arr({ this->size_y, 1 });
             new_arr.zeros();
             for (int i = 0; i < this->size_y; i++) {
-                min = this->arr[normalize_index(i, 1)];;
+                min = this->arr[normalize_index(i, 1)];
                 for (int j = 0; j < this->size_x; j++) {
                     if (this->arr[normalize_index(j, i)] < min) {
                         min = this->arr[normalize_index(i, j)];
@@ -262,7 +262,7 @@ public:
             NDArray new_arr({ this->size_y, 1 });
             new_arr.zeros();
             for (int i = 0; i < this->size_y; i++) {
-                max = this->arr[normalize_index(i, 1)];;
+                max = this->arr[normalize_index(i, 1)];
                 for (int j = 0; j < this->size_x; j++) {
                     if (this->arr[normalize_index(i, j)] > max) {
                         max = this->arr[normalize_index(i, j)];
