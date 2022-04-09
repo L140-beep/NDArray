@@ -500,7 +500,6 @@ int main()
     a4.avg(0).display();
     std::cout << "average(1): " << std::endl;
     a4.avg(1).display();
-
     NDArray arr({6, 1});
     NDArray arr1({1, 6});
     std::cout << "NDArray arr({6, 1}):" << std::endl;
