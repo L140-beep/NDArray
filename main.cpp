@@ -205,7 +205,6 @@ public:
                 value = 0;
                 for (int j = 0; j < this->size_y; j++)
                 {
-                    std::cout << normalize_index(j, i) << std::endl;
                     value += this->arr[normalize_index(j, i)];
                 }
                 new_arr[{i + 1, 1}] = value;
@@ -423,6 +422,18 @@ public:
         }
     }
 
+    float mean(){
+        float value = 0;
+        for (int i = 0; i < this->size_x; i++)
+        {
+            for (int j = 0; j < this->size_y; j++){
+                value += arr[normalize_index(j, i)];
+            }
+        }
+        
+        return value / (this->size_x * this->size_y);
+    }
+
     void display()
     {
         for (int i = 0; i < this->size_y; i++)
@@ -470,6 +481,7 @@ int main()
     a4.random(1, 5);
     std::cout << "matmul: " << std::endl;
     a4.matmul(a1).display();
+    std::cout << "a4 = " << std::endl;
     a4.display();
     std::cout << "min(0): " << std::endl;
     a4.min(0).display();
@@ -501,5 +513,7 @@ int main()
     arr1.transpone().display();
     std::cout << "arr.min(0);" << std::endl;
     arr.min(0).display();
+    std::cout << "arr.min(1);" << std::endl;
     arr1.min(1).display();
+    std::cout << arr.mean() << std::endl;
 }
