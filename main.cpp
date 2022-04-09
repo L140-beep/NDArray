@@ -422,15 +422,17 @@ public:
         }
     }
 
-    float mean(){
+    float mean()
+    {
         float value = 0;
         for (int i = 0; i < this->size_x; i++)
         {
-            for (int j = 0; j < this->size_y; j++){
+            for (int j = 0; j < this->size_y; j++)
+            {
                 value += arr[normalize_index(j, i)];
             }
         }
-        
+
         return value / (this->size_x * this->size_y);
     }
 
@@ -512,7 +514,11 @@ int main()
     arr1.transpone().display();
     std::cout << "arr.min(0);" << std::endl;
     arr.min(0).display();
-    std::cout << "arr.min(1);" << std::endl;
+    std::cout << "arr1.min(1);" << std::endl;
     arr1.min(1).display();
-    std::cout << arr.mean() << std::endl;
+
+    std::cout << "a4 = " << std::endl;
+    a4.display();
+    std::cout << "a4.mean() = " << a4.mean() << std::endl;
+    std::cout << "arr1.mean() = " << arr1.mean() << std::endl;
 }
